@@ -29,7 +29,7 @@ This is a full-stack calculator application that allows users to perform basic m
 
 ## Testing
 
-Both the frontend and backend components contain unit tests.
+The backend components contain unit tests.
 
 ## Technologies Used
 1. Angular
