@@ -1,0 +1,25 @@
+<!-- calculator.component.html -->
+<div class="calculator">
+  <div>
+    <div>
+      <input type="number" [(ngModel)]="num1" placeholder="Enter number 1" />
+      <select [(ngModel)]="selectedOperation">
+        <option value="add">+</option>
+        <option value="subtract">-</option>
+        <option value="multiply">*</option>
+        <option value="divide">/</option>
+      </select>
+      <input type="number" [(ngModel)]="num2" placeholder="Enter number 2" />
+    </div>
+    <button (click)="performCalculation()">Calculate</button>
+    <div *ngIf="result !== null">Result: {{ result }}</div>
+
+    <div>
+      <h2>Calculation History</h2>
+      <div *ngFor="let calculation of calculations">
+        {{ calculation.num1 }} {{ calculation.operation }}
+        {{ calculation.num2 }} = {{ calculation.result }}
+      </div>
+    </div>
+  </div>
+</div>
